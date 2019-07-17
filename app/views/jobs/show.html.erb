@@ -1,0 +1,32 @@
+<h2>Show Job</h2>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @job.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.description %>
+</p>
+
+
+<p>
+  <strong>Company:</strong>
+  <%= @job.company %>
+</p>
+
+
+<p>
+  <strong>Url:</strong>
+  <%= @job.url %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_job_path(@job) %> |
+  <%= link_to "Back", jobs_path %>
+  <%= link_to "Delete" , job_path, method: :delete, data: {confirm: "Are you sure"}%>
+
+</p>
+
