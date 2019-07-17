@@ -17,6 +17,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'simple_form'
 gem 'haml', '~> 5.1'
 gem 'bootstrap-sass', '~> 3.4'
+gem 'jquery-rails'
 
 
 
