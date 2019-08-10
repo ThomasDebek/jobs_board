@@ -10,16 +10,12 @@ class JobsController < ApplicationController
   def show
   end
 
-  def edit
-  end
-
-
   def new
     @job = Job.new
   end
 
   def create
-    @job = Job.new(job_params)
+    @job = Job.new(jobs_params)
     if @job.save
       redirect_to @job
     else
@@ -27,14 +23,16 @@ class JobsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
-    if @job.update_attributes(job_params)
+    if @job.update_attributes(jobs_params)
       redirect_to @job
     else
       render action: 'Edit'
     end
   end
-
 
   def destroy
     @job.destroy
@@ -47,7 +45,7 @@ class JobsController < ApplicationController
 
   private
 
-  def job_params
+  def jobs_params
     params.require(:job).permit(:title, :description, :company, :url)
   end
 
@@ -57,4 +55,5 @@ class JobsController < ApplicationController
 
 
 end
+
 
